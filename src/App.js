@@ -65,7 +65,7 @@ class App extends Component {
       }
       else {
         const newCarro = carro.filter(x => x.name !== producto.name);
-        return this.setState({ carro: newCarro });
+        return this.setState({ esCarroVisible: false, carro: newCarro });
       }
     }
   }
