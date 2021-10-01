@@ -65,13 +65,13 @@ class App extends Component {
       }
       else {
         const newCarro = carro.filter(x => x.name !== producto.name);
-        if (!carro.length) {
-          return this.setState({ esCarroVisible: false, carro: newCarro });
+
+        return this.setState(
+          !carro.length 
+          ? { esCarroVisible: false, carro: newCarro } 
+          : { carro: newCarro }
+          );
         }
-        else {
-          return this.setState({ carro: newCarro });
-        }
-      }
     }
   }
 
